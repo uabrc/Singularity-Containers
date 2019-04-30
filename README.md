@@ -15,11 +15,22 @@ Copy and paste the following code into the editor window. (Replace all current c
 #!/bin/bash
 # JOB HEADERS HERE
 
-git clone https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git /data/user/$USER/r-visualizations
+git clone https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git /data/user/$USER/singularity_containers
 
 
 ```
 
 # Start Jupyter Notebook 
-Launch Jupyter Notebook through the interactive apps page in the OnDemand (rc.uab.edu) portal
+Launch Jupyter Notebook through the interactive apps page in the OnDemand (rc.uab.edu) portal using following settings:
 
+## Environment Setup:
+```
+# Load required modules
+module load Singularity/2.5.2-GCC-5.4.0-2.26
+module load Anaconda3
+```
+
+## Extra Jupyter Arguments:
+```
+--notebook-dir=/data/user/$USER/singularity_containers
+```
