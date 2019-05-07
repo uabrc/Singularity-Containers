@@ -14,8 +14,8 @@ Copy and paste the following code into the editor window. (Replace all current c
 ```
 #!/bin/bash
 # JOB HEADERS HERE
-
-git clone https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git /data/user/$USER/singularity_containers
+mkdir -p /data/user/$USER/rc-training-sessions
+git clone https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git /data/user/$USER/rc-training-sessions/singularity_containers
 
 
 ```
@@ -32,5 +32,5 @@ module load Anaconda3
 
 ## Extra Jupyter Arguments:
 ```
---notebook-dir=/data/user/$USER/singularity_containers
+--notebook-dir=/data/user/$USER/rc-training-sessions/singularity_containers
 ```
