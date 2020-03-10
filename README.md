@@ -14,8 +14,22 @@ Copy and paste the following code into the editor window. (Replace all current c
 ```
 #!/bin/bash
 # JOB HEADERS HERE
-mkdir -p /data/user/$USER/rc-training-sessions
-git clone https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git /data/user/$USER/rc-training-sessions/singularity_containers
+
+basefolder=/data/user/$USER/rc-training-sessions
+folder=/data/user/$USER/rc-training-sessions/singularity_containers
+URL=https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git
+
+if [ -d "$basefolder" ] ; then
+    if [ -d "$folder" ] ; then
+        cd "$folder"
+        git pull "$URL"
+    else 
+        git clone "$URL" "$folder"
+    fi 
+else
+   mkdir -p "$basefolder"
+   git clone "$URL" "$folder"
+fi
 
 
 ```
