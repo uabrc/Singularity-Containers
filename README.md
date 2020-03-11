@@ -15,8 +15,8 @@ Copy and paste the following code into the editor window. (Replace all current c
 #!/bin/bash
 # JOB HEADERS HERE
 
-mkdir -p /data/user/$USER/rc-training-sessions2
-folder=/data/user/$USER/rc-training-sessions2/singularity_containers
+mkdir -p /data/user/$USER/rc-training-sessions
+folder=/data/user/$USER/rc-training-sessions/singularity_containers
 URL=https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git
 
 if [ -d "$folder" ] ; then
