@@ -15,22 +15,17 @@ Copy and paste the following code into the editor window. (Replace all current c
 #!/bin/bash
 # JOB HEADERS HERE
 
-basefolder=/data/user/$USER/rc-training-sessions
-folder=/data/user/$USER/rc-training-sessions/singularity_containers
+mkdir -p /data/user/$USER/rc-training-sessions2
+folder=/data/user/$USER/rc-training-sessions2/singularity_containers
 URL=https://gitlab.rc.uab.edu/rc-training-sessions/singularity_containers.git
 
-if [ -d "$basefolder" ] ; then
-    if [ -d "$folder" ] ; then
-        cd "$folder"
-        git pull "$URL"
-    else 
-        git clone "$URL" "$folder"
-    fi 
-else
-   mkdir -p "$basefolder"
-   git clone "$URL" "$folder"
+if [ -d "$folder" ] ; then
+    cd "$folder"
+    git pull "$URL"
+else 
+    mkdir -p "$folder"
+    git clone "$URL" "$folder"
 fi
-
 
 ```
 
