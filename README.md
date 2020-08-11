@@ -35,7 +35,7 @@ Launch Jupyter Notebook through the interactive apps page in the OnDemand (rc.ua
 ## Environment Setup:
 ```
 # Load required modules
-module load Singularity/2.5.2-GCC-5.4.0-2.26
+module load Singularity/3.5.2-GCC-5.4.0-2.26
 module load Anaconda3
 ```
 
