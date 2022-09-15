@@ -1,6 +1,6 @@
-# SIngularity Container
+# Singularity Containers
 
-This is a beginner tutorial on using SIngularity COntainers
+This is a beginner tutorial on using Singularity COntainers
 
 # Setup
 
